@@ -16,8 +16,8 @@ before_script:
 script:
   - docker --version # print the version for logging
   - docker build -t automating-stuffs .
-  - docker tag automating-stuffs YOUR_DOCKER_HUB/automating-stuffs:latest
+  - docker tag automating-stuffs kinggeorge1/automating-stuffs:latest
 
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker push YOUR_DOCKER_HUB/simple-node
+  - docker push kinggeorge1/automating-stuffs
