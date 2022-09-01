@@ -20,4 +20,4 @@ script:
 
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker push kinggeorge1/automating-stuffs
+  - docker push kinggeorge1/automating-stuffs:latest
